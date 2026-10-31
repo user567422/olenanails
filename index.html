@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Olena Nails — manucure, vernis semi-permanent, extensions et pédicure en Belgique. Réservation sur Telegram ou WhatsApp : +32 493 91 03 02.">
+<meta property="og:title" content="Olena Nails">
+<meta property="og:description" content="Manucure & pédicure en Belgique. Réservation : +32 493 91 03 02">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='20' y='6' width='24' height='52' rx='12' fill='%23b0224a'/%3E%3Crect x='26' y='14' width='5' height='20' rx='2.5' fill='%23ffffff66'/%3E%3C/svg%3E">
+<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Olena Nails</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Lora:ital,wght@0,500;1,500&family=Nunito:wght@400;600;800&display=swap">
+<style>
+/* Layout: a personal page, not a template. Hero text left + taped note card right, then a chatty intro, a handwritten-feel price list, nail shapes, contact note */
+:root{
+  --bg:#fdf7f5; --paper:#fffdf8; --ink:#33201f; --soft:#7d6260; --line:#ead8d4;
+  --berry:#b0224a; --berry-ink:#ffffff; --tape:#f1d7c8; --mark:#f7c9d3;
+  --hand:"Caveat", "Segoe Print", "Comic Sans MS", cursive;
+  --serif:"Lora", Georgia, "Times New Roman", serif;
+  --body:"Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1c1314; --paper:#271b1c; --ink:#f5e8e6; --soft:#c0a5a2; --line:#3d2b2c;
+  --berry:#f06a8d; --berry-ink:#1c1314; --tape:#5a4038; --mark:#6b2a3c; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#1c1314; --paper:#271b1c; --ink:#f5e8e6; --soft:#c0a5a2; --line:#3d2b2c;
+  --berry:#f06a8d; --berry-ink:#1c1314; --tape:#5a4038; --mark:#6b2a3c; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(18px, env(safe-area-inset-left, 0px));padding-right:max(18px, env(safe-area-inset-right, 0px))}
+h1,h2{font-family:var(--serif);font-weight:500;text-wrap:balance;margin:0;line-height:1.15}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--berry);outline-offset:3px;border-radius:4px}
+.hand{font-family:var(--hand);font-weight:700}
+.hl{background:linear-gradient(transparent 58%, var(--mark) 58%, var(--mark) 92%, transparent 92%);padding:0 .1em}
+
+/* top */
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-block:22px 10px}
+.logo{font-family:var(--hand);font-weight:700;font-size:2rem;color:var(--berry);text-decoration:none;line-height:1}
+.langs{display:flex;gap:2px;font-size:.85rem}
+.langs button{font:inherit;font-weight:600;background:none;border:0;color:var(--soft);padding:4px 7px;cursor:pointer;border-radius:4px}
+.langs button[aria-pressed="true"]{color:var(--ink);text-decoration:underline;text-decoration-color:var(--berry);text-decoration-thickness:2px;text-underline-offset:4px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:40px;align-items:center;padding-block:36px 56px}
+.hello{font-family:var(--hand);font-size:1.9rem;color:var(--berry);margin:0 0 4px;line-height:1.1}
+.hero h1{font-size:clamp(2.1rem, 5.6vw, 3.4rem)}
+.hero p.sub{color:var(--soft);max-width:40ch;margin:18px 0 0}
+
+.note{background:var(--paper);border:1px solid var(--line);padding:30px 26px 24px;transform:rotate(1.8deg);box-shadow:0 10px 24px -14px rgba(60,20,25,.35);position:relative;justify-self:center;width:100%;max-width:340px}
+.note::before{content:"";position:absolute;top:-13px;left:50%;width:110px;height:26px;margin-left:-55px;background:var(--tape);opacity:.85;transform:rotate(-3deg)}
+.note .hand{font-size:1.7rem;line-height:1;display:block;color:var(--soft)}
+.num{display:block;font-family:var(--serif);font-size:1.75rem;margin:8px 0 18px;white-space:nowrap;user-select:all;font-variant-numeric:tabular-nums}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:inherit;font-weight:800;font-size:.95rem;padding:10px 18px;border-radius:10px;border:2px solid var(--ink);background:transparent;color:var(--ink);text-decoration:none;cursor:pointer}
+.btn.main{background:var(--berry);border-color:var(--berry);color:var(--berry-ink)}
+.linkish{font:inherit;font-size:.88rem;background:none;border:0;padding:0;margin-top:12px;color:var(--soft);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.copied{font-size:.85rem;color:var(--berry);min-height:1.3em;margin-top:4px}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px;padding-block:48px;border-top:1px dashed var(--line)}
+.about .hand{font-size:2.2rem;line-height:1.1;color:var(--berry);transform:rotate(-2deg);margin:0}
+.about p{margin:0 0 12px;max-width:58ch}
+
+/* price list */
+.menu{padding-block:48px;border-top:1px dashed var(--line)}
+.menu h2{font-size:clamp(1.7rem, 4vw, 2.3rem);margin-bottom:6px}
+.menu .small{color:var(--soft);margin:0 0 26px}
+.list{list-style:none;margin:0;padding:0;columns:2;column-gap:56px}
+.list li{break-inside:avoid;padding-block:12px}
+.list b{font-weight:800;font-size:1.05rem}
+.list span{display:block;color:var(--soft);font-size:.95rem}
+
+/* shapes */
+.shapes-wrap{padding-block:48px;border-top:1px dashed var(--line)}
+.shapes-wrap .hand{font-size:2rem;color:var(--berry);margin:0 0 22px;line-height:1.1}
+.shapes{display:flex;flex-wrap:wrap;gap:28px 40px;align-items:flex-end}
+.shape{display:grid;justify-items:center;gap:10px;font-size:.95rem}
+.nail{width:40px;height:66px;background:var(--berry);position:relative}
+.nail::after{content:"";position:absolute;left:24%;top:20%;width:16%;height:40%;border-radius:999px;background:#ffffff4d}
+.n-square{border-radius:5px 5px 20px 20px}
+.n-round{border-radius:20px 20px 20px 20px / 18px 18px 20px 20px}
+.n-oval{border-radius:50% 50% 20px 20px / 60% 60% 20px 20px}
+.n-almond{border-radius:50% 50% 20px 20px / 100% 100% 20px 20px}
+.n-stiletto{clip-path:polygon(50% 0,92% 50%,100% 100%,0 100%,8% 50%);border-radius:0 0 20px 20px}
+.shape:nth-child(2) .nail{background:#e39aa6}
+.shape:nth-child(3) .nail{background:#d9c0a3}
+.shape:nth-child(4) .nail{background:#6d1d36}
+.shape:nth-child(5) .nail{background:#c9506a}
+
+/* contact */
+.contact{padding-block:56px 40px;border-top:1px dashed var(--line);display:grid;gap:10px}
+.contact h2{font-size:clamp(1.7rem, 4vw, 2.3rem)}
+.contact p{margin:0;color:var(--soft);max-width:50ch}
+.contact .num{margin:6px 0 10px}
+footer{padding-block:26px 34px;font-size:.85rem;color:var(--soft)}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;gap:44px;padding-block:20px 48px}
+  .note{transform:rotate(1deg)}
+  .about{grid-template-columns:1fr;gap:12px}
+  .list{columns:1}
+}
+@media (prefers-reduced-motion:no-preference){
+  .btn{transition:transform .12s ease}
+  .btn:hover{transform:translateY(-2px)}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#top">Olena Nails</a>
+    <nav class="langs" aria-label="Language">
+      <button type="button" id="lang-fr" data-lang="fr">FR</button>
+      <button type="button" id="lang-nl" data-lang="nl">NL</button>
+      <button type="button" id="lang-en" data-lang="en">EN</button>
+      <button type="button" id="lang-ru" data-lang="ru">RU</button>
+    </nav>
+  </header>
+
+  <div class="hero" id="top">
+    <div>
+      <p class="hello" data-i="hello">Bonjour, je suis Olena</p>
+      <h1 data-h="title">Je m'occupe de vos <span class="hl">ongles</span> en Belgique</h1>
+      <p class="sub" data-i="sub">Manucure, vernis semi-permanent, extensions et pédicure. Je travaille sur rendez-vous, sans précipitation.</p>
+    </div>
+    <div class="note">
+      <span class="hand" data-i="noteHead">Pour prendre rendez-vous :</span>
+      <span class="num" id="num">+32 493 91 03 02</span>
+      <div class="btns">
+        <a class="btn main" href="https://t.me/olenanaailsbot" target="_blank" rel="noopener" data-i="tg">Réserver sur Telegram</a>
+        <a class="btn" href="https://wa.me/32493910302" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="tel:+32493910302" data-i="call">Appeler</a>
+      </div>
+      <button class="linkish" type="button" id="copy" data-i="copy">copier le numéro</button>
+      <div class="copied" id="copied" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="about">
+    <p class="hand" data-i="aboutHead">Un peu sur moi</p>
+    <div>
+      <p data-i="about1">J'aime quand les ongles sont propres, nets et que la couleur tient vraiment. Je prends le temps de bien préparer l'ongle, c'est ça qui fait la différence.</p>
+      <p data-i="about2">Vous pouvez venir avec une photo de ce qui vous plaît, ou on choisit ensemble sur place.</p>
+    </div>
+  </div>
+
+  <div class="menu">
+    <h2 data-i="menuTitle">Ce que je propose</h2>
+    <p class="small" data-i="menuSmall">Pour les prix, écrivez-moi, je réponds vite.</p>
+    <ul class="list">
+      <li><b data-i="s1">Manucure</b><span data-i="s1d">cuticules, limage, forme</span></li>
+      <li><b data-i="s2">Vernis semi-permanent</b><span data-i="s2d">tient 2 à 3 semaines</span></li>
+      <li><b data-i="s3">Extensions gel</b><span data-i="s3d">la longueur et la forme que vous voulez</span></li>
+      <li><b data-i="s4">Renforcement</b><span data-i="s4d">gel sur l'ongle naturel</span></li>
+      <li><b data-i="s5">Déco et nail art</b><span data-i="s5d">french, ombré, dessins, strass</span></li>
+      <li><b data-i="s6">Pédicure</b><span data-i="s6d">soin des pieds et vernis</span></li>
+    </ul>
+  </div>
+
+  <div class="shapes-wrap">
+    <p class="hand" data-i="shHead">Quelle forme vous plaît ?</p>
+    <div class="shapes">
+      <div class="shape"><div class="nail n-square"></div><span data-i="f1">carrée</span></div>
+      <div class="shape"><div class="nail n-round"></div><span data-i="f2">ronde</span></div>
+      <div class="shape"><div class="nail n-oval"></div><span data-i="f3">ovale</span></div>
+      <div class="shape"><div class="nail n-almond"></div><span data-i="f4">amande</span></div>
+      <div class="shape"><div class="nail n-stiletto"></div><span data-i="f5">stiletto</span></div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <h2 data-i="cTitle">Écrivez-moi</h2>
+    <p data-i="cText">Le plus simple, c'est le bot Telegram ou WhatsApp. Dites-moi ce que vous voulez et quand vous êtes libre, et on trouve un moment.</p>
+    <span class="num">+32 493 91 03 02</span>
+    <div class="btns">
+      <a class="btn main" href="https://t.me/olenanaailsbot" target="_blank" rel="noopener" data-i="tg">Réserver sur Telegram</a>
+      <a class="btn" href="https://wa.me/32493910302" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" href="tel:+32493910302" data-i="call">Appeler</a>
+    </div>
+  </div>
+
+  <footer>Olena Nails · <span data-i="country">Belgique</span></footer>
+</div>
+
+<script>
+const T = {
+  fr:{hello:"Bonjour, je suis Olena",title:["Je m'occupe de vos ","ongles"," en Belgique"],sub:"Manucure, vernis semi-permanent, extensions et pédicure. Je travaille sur rendez-vous, sans précipitation.",
+    noteHead:"Pour prendre rendez-vous :",call:"Appeler",tg:"Réserver sur Telegram",copy:"copier le numéro",copied:"Numéro copié",copyFail:"Sélectionnez le numéro pour le copier",
+    aboutHead:"Un peu sur moi",about1:"J'aime quand les ongles sont propres, nets et que la couleur tient vraiment. Je prends le temps de bien préparer l'ongle, c'est ça qui fait la différence.",about2:"Vous pouvez venir avec une photo de ce qui vous plaît, ou on choisit ensemble sur place.",
+    menuTitle:"Ce que je propose",menuSmall:"Pour les prix, écrivez-moi, je réponds vite.",s1:"Manucure",s1d:"cuticules, limage, forme",s2:"Vernis semi-permanent",s2d:"tient 2 à 3 semaines",s3:"Extensions gel",s3d:"la longueur et la forme que vous voulez",s4:"Renforcement",s4d:"gel sur l'ongle naturel",s5:"Déco et nail art",s5d:"french, ombré, dessins, strass",s6:"Pédicure",s6d:"soin des pieds et vernis",
+    shHead:"Quelle forme vous plaît ?",f1:"carrée",f2:"ronde",f3:"ovale",f4:"amande",f5:"stiletto",
+    cTitle:"Écrivez-moi",cText:"Le plus simple, c'est le bot Telegram : choisissez la prestation, le jour et l'heure. Ou écrivez-moi sur WhatsApp. Dites-moi ce que vous voulez et quand vous êtes libre, et on trouve un moment.",country:"Belgique"},
+  nl:{hello:"Hallo, ik ben Olena",title:["Ik zorg voor je ","nagels"," in België"],sub:"Manicure, gellak, verlengingen en pedicure. Ik werk op afspraak en neem er de tijd voor.",
+    noteHead:"Afspraak maken:",call:"Bellen",tg:"Boeken via Telegram",copy:"nummer kopiëren",copied:"Nummer gekopieerd",copyFail:"Selecteer het nummer om te kopiëren",
+    aboutHead:"Even voorstellen",about1:"Ik hou van nagels die verzorgd en strak zijn, met kleur die echt blijft zitten. Ik neem de tijd om de nagel goed voor te bereiden, daar zit het verschil.",about2:"Neem gerust een foto mee van wat je mooi vindt, of we kiezen samen ter plaatse.",
+    menuTitle:"Wat ik doe",menuSmall:"Voor prijzen stuur je me een bericht, ik antwoord snel.",s1:"Manicure",s1d:"nagelriemen, vijlen, vorm",s2:"Gellak",s2d:"houdt 2 tot 3 weken",s3:"Gelverlenging",s3d:"de lengte en vorm die je wilt",s4:"Versteviging",s4d:"gel op de natuurlijke nagel",s5:"Nail art",s5d:"french, ombré, tekeningen, steentjes",s6:"Pedicure",s6d:"voetverzorging en lak",
+    shHead:"Welke vorm vind je mooi?",f1:"vierkant",f2:"rond",f3:"ovaal",f4:"amandel",f5:"stiletto",
+    cTitle:"Stuur me een bericht",cText:"Het makkelijkst is de Telegram-bot: kies behandeling, dag en uur. Of stuur me een bericht op WhatsApp. Laat weten wat je wilt en wanneer je kan, dan zoeken we een moment.",country:"België"},
+  en:{hello:"Hi, I'm Olena",title:["I take care of your ","nails"," in Belgium"],sub:"Manicure, gel polish, extensions and pedicure. I work by appointment and never rush.",
+    noteHead:"To book:",call:"Call",tg:"Book on Telegram",copy:"copy number",copied:"Number copied",copyFail:"Select the number to copy it",
+    aboutHead:"A bit about me",about1:"I like nails that are clean and neat, with colour that really lasts. I take my time preparing each nail, because that's what makes the difference.",about2:"Bring a photo of something you like, or we can pick together when you're here.",
+    menuTitle:"What I offer",menuSmall:"For prices, just message me. I reply quickly.",s1:"Manicure",s1d:"cuticles, filing, shape",s2:"Gel polish",s2d:"lasts 2 to 3 weeks",s3:"Gel extensions",s3d:"the length and shape you want",s4:"Strengthening",s4d:"gel over the natural nail",s5:"Nail art",s5d:"french, ombré, designs, rhinestones",s6:"Pedicure",s6d:"foot care and polish",
+    shHead:"Which shape do you like?",f1:"square",f2:"round",f3:"oval",f4:"almond",f5:"stiletto",
+    cTitle:"Message me",cText:"The easiest way is the Telegram bot: pick the service, day and time. Or message me on WhatsApp. Tell me what you'd like and when you're free, and we'll find a time.",country:"Belgium"},
+  ru:{hello:"Привет, я Олена",title:["Делаю ","ногти"," в Бельгии"],sub:"Маникюр, гель-лак, наращивание и педикюр. Работаю по записи, без спешки.",
+    noteHead:"Записаться:",call:"Позвонить",tg:"Записаться в Telegram",copy:"скопировать номер",copied:"Номер скопирован",copyFail:"Выделите номер, чтобы скопировать",
+    aboutHead:"Немного обо мне",about1:"Люблю, когда ногти аккуратные, ровные и покрытие держится по-настоящему долго. Я не тороплюсь с подготовкой ногтя, от неё зависит весь результат.",about2:"Можно прийти с фото того, что нравится, или выберем вместе на месте.",
+    menuTitle:"Что я делаю",menuSmall:"По ценам пишите, отвечаю быстро.",s1:"Маникюр",s1d:"кутикула, опил, форма",s2:"Гель-лак",s2d:"держится 2–3 недели",s3:"Наращивание гелем",s3d:"любая длина и форма",s4:"Укрепление",s4d:"гель на натуральные ногти",s5:"Дизайн",s5d:"френч, омбре, рисунки, стразы",s6:"Педикюр",s6d:"уход за стопами и покрытие",
+    shHead:"Какая форма вам нравится?",f1:"квадрат",f2:"круг",f3:"овал",f4:"миндаль",f5:"стилет",
+    cTitle:"Пишите мне",cText:"Проще всего через Telegram-бота: выберите услугу, день и время. Или напишите в WhatsApp. Напишите, что хотите и когда вам удобно, и подберём время.",country:"Бельгия"}
+};
+let lang = "fr";
+function setLang(l){
+  lang = T[l] ? l : "fr";
+  const d = T[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i]").forEach(el => { const v = d[el.dataset.i]; if (v) el.textContent = v; });
+  const h = document.querySelector("[data-h='title']");
+  h.replaceChildren(d.title[0], Object.assign(document.createElement("span"), {className:"hl", textContent:d.title[1]}), d.title[2]);
+  document.querySelectorAll(".langs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
+  document.getElementById("copied").textContent = "";
+  try { localStorage.setItem("olena-lang", lang); } catch (e) {}
+}
+document.querySelectorAll(".langs button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+let saved = null;
+try { saved = localStorage.getItem("olena-lang"); } catch (e) {}
+if (!saved) { const n = (navigator.language || "").slice(0,2); if (T[n]) saved = n; }
+setLang(saved || "fr");
+
+document.getElementById("copy").addEventListener("click", () => {
+  const out = document.getElementById("copied");
+  const fallback = () => {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById("num"));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    out.textContent = T[lang].copyFail;
+  };
+  try {
+    navigator.clipboard.writeText("+32493910302").then(() => out.textContent = T[lang].copied, fallback);
+  } catch (e) { fallback(); }
+});
+</script>
+</body>
+</html>
